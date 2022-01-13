@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Roro's Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../index/index.html">Roro's Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="../index/index.html">Home</a></li>
+        <li><a href="../html/about.html">About</a></li>
+        <li><a href="../html/gallery.html">Gallery</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../html/login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="../html/join.html"><span class="glyphicon glyphicon-log-in"></span> Join</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    <div class="col-sm-8 text-left"> 
+       <h1 style="text-align: center;">Join Us</h1>
+       <form action="a.jsp" method="post" name="frm">
+           <fieldset>
+               <legend class=""></legend>
+               <table class="table table-bordered">
+                    <tr>
+                        <th class="join"><label for="join_id">ID</label></th>
+                        <td><input type="text" id="join_id" class="textForm" required autofocus>
+                        <input type="button" class="btn_overlap" value="dup.check"></td>
+                    </tr>
+                    <tr>
+                        <th class="join"><label for="join_pw">Password</label></th>
+                        <td><input type="password" id="join_pw" class="textForm"></td>
+                    </tr>
+                    <tr>
+                        <th class="join"><label for="join_name">Name</label></th>
+                        <td><input type="text" id="join_name" class="textForm"></td>
+                    </tr>
+                    <tr>
+                        <th class="join"><label for="join_tel">Tel</label></th>
+                        <td><input type="tel" id="join_tel" class="textForm"></td>
+                    </tr>
+                    <tr>
+                        <th class="join"><label for="join_email">E-mail</label></th>
+                        <td><input type="email" id="join_email" class="textFrom"></td>
+                    </tr>
+                    <tr>
+                        <th class="join">gender</th>
+                        <td>
+                            <input type="radio" name="gender" id="male"><label for="male"> male</label>
+                            <input type="radio" name="gender" id="female"><label for="female"> female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="join">Date of Birth </th>
+                        <td><input type="date" class="textForm"></td>
+                    </tr>
+               </table>
+           </fieldset>
+       </form>
+
+      <button type="button" class="btn" onclick="checkForm()">
+        Join Us
+      </button>
+    </div>
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-left" style="font-size: 8pt;">
+  <p>TEL. 010.9480.2808 / E-mail. roro0510@naver.com</p>
+  <p>All right reserved.</p>
+</footer>
+
+<script>
+  function checkForm() {
+
+      if (frm.join_id.value.length == 0) {
+          alert('아이디를 입력하세요.');
+          frm.join_id.focus();
+          return;
+      }
+
+      if (frm.join_pw.value.length == 0) {
+          alert('비밀번호를 입력하세요.');
+          frm.join_pw.focus();
+          return;
+      }
+      if (frm.join_name.value.length == 0) {
+          alert('이름을 입력하세요.');
+          frm.join_name.focus();
+          return;
+      }
+
+      if (frm.join_tel.value.length == 0){
+          alert('전화번호를 입력하세요.');
+          frm.join_tel.focus();
+          return;
+      }
+
+      if (frm.join_email.value.length == 0) {
+          alert('이메일을 입력하세요.')
+          frm.join_email.focus();
+          return;
+      }
+
+      if (frm.gender[0].checked == false && frm.gender[1].checked == false) {
+          alert('성별을 선택하세요.');
+          frm.gender[0].focus();
+          return;
+      }
+
+    frm.submit();
+
+  }
+
+</script>
+<style>
+
+</style>
+
+</body>
+</html>

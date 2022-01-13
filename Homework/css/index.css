@@ -1,0 +1,132 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  .row.content {height: 500px}
+  
+  .sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+  }
+  
+  footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+
+
+.loginForm h2{
+text-align: center;
+margin: 30px;
+}
+
+.idForm{
+border-bottom: 2px solid #adadad;
+margin: 30px;
+padding: 10px 10px;
+}
+
+.passForm{
+border-bottom: 2px solid #adadad;
+margin: 30px;
+padding: 10px 10px;
+}
+
+.id {
+width: 100%;
+border:none;
+outline:none;
+color: #636e72;
+font-size:16px;
+height:25px;
+background: none;
+}
+
+.pw {
+width: 100%;
+border:none;
+outline:none;
+color: #636e72;
+font-size:16px;
+height:25px;
+background: none;
+}
+
+
+.btn {
+position:relative;
+left:50%;
+transform: translateX(-50%);
+margin-bottom: 40px;
+width:30%;
+height:40px;
+background: linear-gradient(125deg,#636e72,#adadad,#f1f1f1);
+background-position: left;
+background-size: 200%;
+color:white;
+font-weight: bold;
+border:none;
+cursor:pointer;
+transition: 0.4s;
+display:inline;
+}
+
+.btn:hover {
+background-position: right;
+}
+
+.bottomText {
+text-align: center;
+}
+
+
+.sidenav ul, .sidenav li{list-style: none;}
+div.sidenav { height: 500px; overflow: hidden;}
+div.sidenav ul{width: calc(100% * 4); display: flex; animation: slide 8s infinite;}
+div.sidenav li{width: calc(100% / 4); height: 500px;}
+div.sidenav li:nth-child(1) {background-color: #555;}
+div.sidenav li:nth-child(2) {background-color: rgb(19, 18, 18);}
+div.sidenav li:nth-child(3) {background-color: rgb(36, 35, 35);}
+div.sidenav li:nth-child(4) {background-color: rgb(54, 53, 53);}
+@keyframes slide {
+  0% {margin-left: 0;}
+  10% {margin-left: 0;}
+  25% {margin-left: -100%;}
+  35% {margin-left: -100%;}
+  50% {margin-left: -200%;}
+  60% {margin-left: -200%;}
+  75% {margin-left: -300%;}
+  85% {margin-left: -300%;}
+  100% {margin-left: 0;}
+}
+p.index {
+  position: absolute;
+  top: 40%;
+  left: 43%;
+  font-size: 40pt;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+th.join {
+  background-color: rgb(173, 173, 173);
+  text-align: center;
+  width: 150px;
+}
+
+.img_index1 {
+  width: 350px; height: 500px;
+  left: 50%;
+  border-radius: 2%;
+}
